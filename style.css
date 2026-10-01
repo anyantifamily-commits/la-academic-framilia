@@ -1,0 +1,325 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: white;
+    background: #111;
+}
+
+.homepage {
+    min-height: 100vh;
+
+    background-image: url("ui.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    position: relative;
+}
+
+.background-overlay {
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.72);
+
+    z-index: 0;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+
+    width: 100%;
+    max-width: 850px;
+
+    margin: auto;
+    padding: 50px 20px;
+}
+
+
+/* LOGO */
+
+.logo {
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 2px solid white;
+    border-radius: 50%;
+
+    font-size: 20px;
+    font-weight: bold;
+
+    margin-bottom: 30px;
+}
+
+
+/* HEADER */
+
+.welcome {
+    font-size: 12px;
+    letter-spacing: 4px;
+    opacity: 0.75;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: clamp(32px, 7vw, 65px);
+    line-height: 0.95;
+    letter-spacing: -2px;
+    margin-bottom: 25px;
+}
+
+h1 span {
+    display: block;
+}
+
+.intro {
+    max-width: 550px;
+
+    font-size: 16px;
+    line-height: 1.6;
+
+    color: #ddd;
+
+    margin-bottom: 40px;
+}
+
+
+/* CARDS */
+
+.study-card,
+.materials-card,
+.quiz-card {
+    background: rgba(20, 20, 20, 0.78);
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    border-radius: 18px;
+
+    padding: 25px;
+
+    margin-bottom: 20px;
+
+    backdrop-filter: blur(8px);
+}
+
+.section-label {
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    color: #aaa;
+
+    margin-bottom: 10px;
+}
+
+.study-card h2 {
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+.study-card p:last-child {
+    color: #ccc;
+}
+
+
+/* MATERIALS */
+
+.materials-info {
+    color: #bbb;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    margin-bottom: 20px;
+}
+
+.material {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding: 15px;
+
+    margin-bottom: 10px;
+
+    background: rgba(255, 255, 255, 0.06);
+
+    border-radius: 10px;
+}
+
+.material-name {
+    font-size: 14px;
+}
+
+.download-btn {
+    background: white;
+    color: black;
+
+    border: none;
+
+    padding: 9px 14px;
+
+    border-radius: 7px;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+
+/* QUIZ */
+
+.quiz-card h2 {
+    font-size: 27px;
+
+    margin-bottom: 8px;
+}
+
+.quiz-card p {
+    color: #bbb;
+
+    line-height: 1.5;
+
+    margin-bottom: 20px;
+}
+
+#takeQuizBtn {
+    width: 100%;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: white;
+
+    color: black;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+#takeQuizBtn:hover {
+    transform: translateY(-2px);
+
+    opacity: 0.9;
+}
+
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+
+    padding: 30px 0;
+
+    color: #888;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .content {
+        padding: 35px 15px;
+    }
+
+    h1 {
+        font-size: 38px;
+    }
+
+    .material {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .download-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+/* SCHOLAR'S QUOTE */
+
+.quote-card {
+    background: rgba(20, 20, 20, 0.78);
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    border-radius: 18px;
+
+    padding: 25px;
+
+    margin-bottom: 20px;
+
+    backdrop-filter: blur(8px);
+}
+
+.quote-card blockquote {
+    font-size: 20px;
+
+    line-height: 1.5;
+
+    font-style: italic;
+
+    color: #f1f1f1;
+
+    margin-bottom: 15px;
+}
+
+.quote-author {
+    color: #999;
+
+    font-size: 13px;
+}
+
+
+/* FUN FACT */
+
+.fun-fact-card {
+    background: rgba(20, 20, 20, 0.78);
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    border-radius: 18px;
+
+    padding: 25px;
+
+    margin-bottom: 20px;
+
+    backdrop-filter: blur(8px);
+}
+
+.fun-fact-card p:last-child {
+    font-size: 16px;
+
+    line-height: 1.6;
+
+    color: #ddd;
+}
